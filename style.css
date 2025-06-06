@@ -170,9 +170,6 @@ main {
           font-size: 24px;
           margin-bottom: 10px;
         }
-        div {
-          /* box-shadow: 0 0 5px 0 #323648; */
-        }
       }
       .read-more-btn {
         padding: 10px 30px;
@@ -232,6 +229,32 @@ main {
           height: 100%;
         }
       }
+    }
+  }
+}
+.my-fun-facts-main-container {
+  color: var(--title-color);
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  .fun-facts-content {
+    border: 1.3px solid #dcdcdc;
+    padding: 25px 25px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    i {
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 20px;
+      color: var(--primary-color);
+      background-color: rgba(247, 124, 146, 0.2);
+      border-radius: 50%;
+    }
+    h3 {
+      font-size: 35px;
+      line-height: 45px;
     }
   }
 }
