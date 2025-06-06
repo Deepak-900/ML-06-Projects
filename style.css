@@ -172,9 +172,32 @@ main {
           /* box-shadow: 0 0 5px 0 #323648; */
         }
       }
+      .read-more-btn {
+        padding: 10px 30px;
+        background-color: var(--primary-color);
+        color: var(--white-color) !important;
+        border: 2px solid var(--gray-color);
+        width: 150px;
+        border-radius: 10px;
+      }
+      .read-more-btn:hover {
+        background-color: transparent;
+        color: var(--primary-color) !important;
+      }
     }
     .right-content {
       width: 50%;
+
+      .right-img-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .my-image {
+          /* width: 75%; */
+          margin: 0 auto;
+        }
+      }
     }
   }
 }
