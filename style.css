@@ -60,6 +60,10 @@ header {
       color: var(--white-color);
       display: inline-block;
       letter-spacing: 3px;
+
+      .short-name {
+        display: none;
+      }
     }
     ul {
       display: flex;
@@ -82,8 +86,10 @@ header {
   }
 }
 main {
+  width: 100vw;
   background: url(./images/test.jpg) no-repeat center;
-  background-size: cover;
+  background-size: 100% 100vh;
+
   min-height: 650px;
   display: flex;
   flex-direction: column;
@@ -154,7 +160,7 @@ main {
       .bio-grids-skills {
         width: 100%;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 49% 49%;
         /* grid-template-rows: 50% 50%; */
         gap: 30px;
         a {
@@ -193,7 +199,8 @@ main {
         align-items: center;
         width: 100%;
         .my-image {
-          /* width: 75%; */
+          display: flex;
+          width: 75%;
           margin: 0 auto;
         }
       }
@@ -407,6 +414,136 @@ main {
           background-color: var(--title-color);
           color: var(--white-color);
           border: 2px solid var(--title-color);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: var(--white-color);
+
+  .my-details-home-section {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+
+    .address {
+      border-right: 1px solid rgba(130, 152, 171, 0.35);
+    }
+    .email {
+      border-right: 1px solid rgba(130, 152, 171, 0.35);
+    }
+    .phone {
+      border-right: 1px solid rgba(130, 152, 171, 0.35);
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 25px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    a {
+      color: var(--para-color);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--primary-color);
+    }
+    p {
+      font-size: 17px;
+      font-weight: 500;
+    }
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(130, 152, 171, 0.35);
+    color: var(--para-color);
+
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+
+    .privacy-policy {
+      a {
+        color: var(--para-color);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--primary-color);
+      }
+    }
+    .copyright {
+      a {
+        color: var(--white-color);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--primary-color);
+      }
+    }
+    .social-media {
+      width: 100%;
+      text-align: end;
+
+      a {
+        padding: 2%;
+        border-radius: 50%;
+        margin-left: 10px;
+        cursor: pointer;
+        text-decoration: none ;
+        color: var(--para-color);
+
+      }
+      a:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    nav {
+      .logo-text {
+        .short-name {
+          display: block;
+        }
+        .long-name {
+          display: none;
+        }
+      }
+      ul {
+      }
+    }
+  }
+  .bio-section {
+    .bio-main-container {
+      .left-content {
+        }
+        .bio-para-text {
+          margin: 18px 0 30px;
+        }
+        .bio-grids-skills {
+          gap: 15px;
+        }
+      }
+      .right-content {
+        width: 50%;
+
+        .right-img-section {
+          width: 100%;
+          /* max-height: 400px; */
+          .my-image {
+            /* width: 75%; */
+            width: 80%;
+            display: flex;
+          }
         }
       }
     }
