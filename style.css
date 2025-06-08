@@ -43,7 +43,7 @@ header {
   width: 100%;
   background-color: var(--primary-color);
   color: var(--white-color);
-  padding: 1% 8%;
+  padding: 1% 4%;
   position: sticky;
   top: 44px;
   z-index: 99;
@@ -109,7 +109,7 @@ main {
     z-index: 9;
 
     h3 {
-      font-size: 70px;
+      font-size: 4rem;
 
       span {
         font-family: "Playwrite HU", cursive;
@@ -137,6 +137,9 @@ main {
       background-color: var(--primary-color);
       border: 2px solid var(--primary-color);
     }
+  }
+  .hero-image {
+    display: none;
   }
 }
 .bio-section {
@@ -387,6 +390,8 @@ main {
           width: 100%;
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
           outline: none;
           box-shadow: none;
         }
@@ -396,6 +401,8 @@ main {
           font-weight: 800;
           font-style: normal;
           letter-spacing: 3px;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
 
           background-color: var(--primary-color);
           color: var(--white-color);
@@ -496,9 +503,8 @@ main {
         border-radius: 50%;
         margin-left: 10px;
         cursor: pointer;
-        text-decoration: none ;
+        text-decoration: none;
         color: var(--para-color);
-
       }
       a:hover {
         color: var(--primary-color);
@@ -509,23 +515,38 @@ main {
 
 @media screen and (max-width: 1024px) {
   header {
-    nav {
-      .logo-text {
-        .short-name {
-          display: block;
-        }
-        .long-name {
-          display: none;
-        }
+    padding: 1% 8%;
+  }
+  main {
+    background-image: url(./images/min-bg.png) no-repeat center;
+    background-size: cover;
+    height: fit-content;
+    padding: 50px 0;
+    .banner-text {
+      margin: 50px 0;
+      text-align: center;
+      h3 {
+        font-size: 3.5rem;
       }
-      ul {
+      h2 {
+        font-size: 28px;
+      }
+    }
+    .hero-image {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .main-my-profile {
+        z-index: 9;
       }
     }
   }
   .bio-section {
     .bio-main-container {
       .left-content {
-        }
         .bio-para-text {
           margin: 18px 0 30px;
         }
@@ -538,13 +559,108 @@ main {
 
         .right-img-section {
           width: 100%;
-          /* max-height: 400px; */
           .my-image {
-            /* width: 75%; */
             width: 80%;
             display: flex;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 4%;
+  }
+  header {
+    padding: 1% 4%;
+    nav {
+      /* .logo-text {
+        .short-name {
+          display: block;
+        }
+        .long-name {
+          display: none;
+        }
+      } */
+
+      ul {
+        display: none;
+      }
+    }
+    .toogle-button {
+      background-color: var(--title-color);
+      color: var(--white-color);
+      padding: 1% 4%;
+      border-radius: 5px;
+      border: none;
+    }
+    .toogle-button:hover {
+      background-color: var(--white-color);
+      color: var(--primary-color);
+    }
+  }
+  .bio-section {
+    .bio-main-container {
+      display: flex;
+      flex-direction: column;
+
+      .left-content {
+        width: 100%;
+      }
+      .right-content {
+        width: 100%;
+      }
+    }
+  }
+  .my-fun-facts-main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .testimonial-section {
+    background-color: var(--bg-color);
+
+    .testimonial-main-container {
+      flex-wrap: wrap;
+      gap: 15px;
+
+      .testimonial {
+        width: 48%;
+      }
+    }
+  }
+  .subscribe-section {
+    .main-subscribe {
+      flex-direction: column;
+      gap: 20px;
+
+      .text-side {
+        width: 100%;
+      }
+      .form-side {
+        width: 100%;
+      }
+    }
+  }
+  .footer {
+    .my-details-home-section {
+      grid-template-columns: 50% 50%;
+      gap: 20px;
+
+      .fax {
+        border-right: 1px solid rgba(130, 152, 171, 0.35);
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: px;
+        font-weight: 500;
       }
     }
   }
