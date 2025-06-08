@@ -599,41 +599,81 @@ main {
 
       .nav-list-container {
         /* display: none; */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 5;
 
         .list-items {
           width: 25%;
           position: absolute;
-          top: 45px;
+          top: 50px;
           right: 0;
-          z-index: 11;
+          z-index: 99;
           display: flex;
           flex-direction: column;
           align-items: start;
           gap: 0;
           background-color: var(--primary-color);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* <- Box shadow */
+
           padding: 10px;
           border: none;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
 
           li {
             line-height: 40px;
-            a {
-              /* color: var(--primary-color) !important; */
-            }
           }
         }
+        .list-items::after {
+          content: "";
+          height: 20px;
+          width: 20px;
+          background-color: var(--primary-color);
+          position: absolute;
+          top: -3px;
+          /* left: 0; */
+          right: 10px;
+          margin-inline: right;
+          rotate: -45deg;
+          z-index: 1;
+        }
+      }
+
+      .nav-list-container.active {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* 👈 Add shadow here */
+      }
+
+      .nav-list-container.active ul {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
     .toogle-button {
       display: block;
+      width: 50px;
       background-color: var(--title-color);
       color: var(--white-color);
-      padding: 1% 4%;
+      padding: 1% 2%;
       border-radius: 5px;
       border: none;
+      cursor: pointer;
+      i {
+        font-size: 20px;
+      }
     }
     .toogle-button:hover {
       background-color: var(--white-color);
       color: var(--primary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    .toogle-button.active {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .toogle-button i {
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
   }
   .bio-section {
