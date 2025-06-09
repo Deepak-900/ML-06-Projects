@@ -55,6 +55,7 @@ header {
   nav {
     display: flex;
     justify-content: space-between;
+    padding: 0 4%;
 
     .logo-text {
       width: 50%;
@@ -94,10 +95,12 @@ header {
     }
   }
 }
+
+/* Home Page Start */
 main {
-  width: 100vw;
+  width: 100%;
   background: url(./images/test.jpg) no-repeat center;
-  background-size: 100% 100vh;
+  /* background-size: 100% 100vh; */
   background-size: cover;
 
   min-height: 650px;
@@ -535,9 +538,103 @@ main {
   }
 }
 
+/* Home Page Start */
+
+/* About Me Page Start  */
+
+.about-head {
+  color: var(--title-color);
+  width: 100%;
+  border-bottom: 1px solid #d4d4d4;
+
+  .about-title {
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .about-title-navigation {
+    width: 100%;
+    display: flex;
+    column-gap: 6px;
+    padding: 0;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: var(--primary-color);
+        span {
+          margin: 0 6px;
+          font-weight: 100;
+          font-size: smaller;
+        }
+      }
+    }
+  }
+}
+
+.about-page-section {
+  color: var(--title-color);
+
+  .about-page-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .bio-section {
+      h3 {
+        color: var(--title-color);
+        line-height: 40px;
+        font-size: 45px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+    }
+    .about-me-details {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        width: 100%;
+        color: #000;
+        line-height: 50px;
+        a {
+          color: var(--para-color);
+        }
+        a:hover {
+          color: var(--primary-color);
+        }
+        span {
+          color: var(--para-color);
+        }
+      }
+      .social-media {
+        text-decoration: none;
+        color: var(--para-color);
+        margin: 0 10px;
+      }
+      .social-media:hover {
+        color: var(--primary-color);
+      }
+    }
+    .image-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .myImg {
+        min-height: 400px;
+      }
+    }
+  }
+}
+
+/* About Me Page End */
+
 @media screen and (max-width: 1024px) {
   header {
-    padding: 1% 8%;
+    padding: 1% 4%;
   }
   .toogle-button {
     display: none;
@@ -601,7 +698,7 @@ main {
     padding: 4%;
   }
   header {
-    padding: 1% 4%;
+    padding: 1% 0%;
     nav {
       position: relative;
       /* .logo-text {
@@ -624,7 +721,7 @@ main {
           width: 25%;
           position: absolute;
           top: 50px;
-          right: 0;
+          right: 4.5%;
           z-index: 99;
           display: flex;
           flex-direction: column;
@@ -760,6 +857,35 @@ main {
       }
     }
   }
+
+  .about-page-section {
+    .about-page-container {
+      display: grid;
+      grid-template-columns: 100%;
+
+      .bio-section {
+        grid-row: 2;
+      }
+      .about-me-details {
+        grid-row: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        p {
+          width: 50%;
+        }
+      }
+      .image-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .myImg {
+          min-height: 400px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 577px) {
@@ -807,6 +933,28 @@ main {
       .social-media {
         text-align: center;
         margin: 15px 0;
+      }
+    }
+  }
+
+  .about-page-section {
+    .about-page-container {
+      .about-me-details {
+        display: flex;
+        flex-direction: row;
+
+        p {
+          width: 100%;
+        }
+      }
+      .image-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .myImg {
+          max-height: 200px;
+        }
       }
     }
   }
