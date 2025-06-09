@@ -98,6 +98,7 @@ main {
   width: 100vw;
   background: url(./images/test.jpg) no-repeat center;
   background-size: 100% 100vh;
+  background-size: cover;
 
   min-height: 650px;
   display: flex;
@@ -105,6 +106,7 @@ main {
   justify-content: center;
   align-items: start;
   position: relative;
+  overflow-x: hidden;
 
   .opacity {
     position: absolute;
@@ -214,6 +216,10 @@ main {
           display: flex;
           width: 75%;
           margin: 0 auto;
+          transition: filter 0.3s ease;
+        }
+        .my-image:hover {
+          filter: drop-shadow(0 -10px 36px rgba(255, 1, 107, 0.781));
         }
       }
     }
@@ -437,6 +443,7 @@ main {
 }
 
 .footer {
+  width: 100%;
   background-color: #000;
   color: var(--white-color);
 
