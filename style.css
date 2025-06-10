@@ -629,6 +629,59 @@ main {
     }
   }
 }
+.about-page-myhobbies {
+  background-color: var(--bg-color);
+
+  .my-hobbies-section {
+    color: var(--title-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .items {
+      width: 30%;
+      a {
+        text-decoration: none;
+        color: var(--title-color);
+        font-size: 20px;
+        h3:hover {
+          color: var(--primary-color);
+        }
+      }
+      p {
+        color: var(--para-color);
+        font-weight: 400;
+        line-height: 30px;
+        margin: 15px 0;
+      }
+    }
+  }
+}
+.about-page-experience {
+  width: 100%;
+  color: var(--title-color);
+
+  .experience {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .text-side {
+      width: 50%;
+      color: var(--para-color);
+      font-weight: 400;
+      padding: 0 20px;
+    }
+    .image-side {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      .my-img {
+        width: 100%;
+        max-height: 500px;
+      }
+    }
+  }
+}
 
 /* About Me Page End */
 
@@ -881,7 +934,33 @@ main {
         justify-content: center;
         align-items: center;
         .myImg {
-          min-height: 400px;
+          max-height: 100px;
+        }
+      }
+    }
+  }
+  .about-page-myhobbies {
+    .my-hobbies-section {
+      .items {
+        width: 49%;
+      }
+    }
+  }
+  .about-page-experience {
+    .experience {
+      flex-direction: column;
+      .text-side {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 20px;
+      }
+      .image-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .my-img {
+          width: 75%;
+          height: 100%;
         }
       }
     }
@@ -929,6 +1008,7 @@ main {
 
       .privacy-policy {
         grid-row: 3;
+        text-align: center;
       }
       .social-media {
         text-align: center;
@@ -961,6 +1041,9 @@ main {
 }
 
 @media screen and (max-width: 425px) {
+  .header-name {
+    font-size: 32px;
+  }
   .navbar {
     .short-name {
       display: block !important;
@@ -1055,6 +1138,14 @@ main {
       .social-media {
         text-align: center;
         margin: 15px 0;
+      }
+    }
+  }
+
+  .about-page-myhobbies {
+    .my-hobbies-section {
+      .items {
+        width: 100%;
       }
     }
   }
