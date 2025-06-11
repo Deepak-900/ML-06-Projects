@@ -606,7 +606,7 @@ main {
   }
 }
 
-/* Home Page Start */
+/* Home Page End */
 
 /* About Me Page Start  */
 
@@ -1136,6 +1136,87 @@ main {
 }
 /* Blog Details Page End */
 
+/* Contact Me Page Start  */
+.contact-me-page-section {
+  color: var(--title-color);
+
+  .contact-main-section {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+    gap: 10px;
+
+    .form-section {
+      form {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .form-group {
+          display: flex;
+          gap: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+          padding: 15px;
+          font-size: 18px;
+          border-radius: 5px;
+          background-color: var(--bg-color);
+          border: 2px solid #ccc; /* Default border */
+        }
+        input:focus,
+        textarea:focus {
+          /* border: 1px solid var(--primary-color);
+         */
+          outline: none;
+          border-color: var(--primary-color);
+        }
+        input[type="text"],
+        input[type="email"] {
+          width: 49%;
+        }
+        textarea {
+          box-sizing: border-box;
+          width: 100%;
+        }
+        button {
+          max-width: 200px;
+          cursor: pointer;
+          background-color: transparent;
+          background-color: var(--primary-color);
+          color: var(--white-color);
+          font-weight: 300;
+          border: 2px solid var(--primary-color);
+
+          transition: 0.8s background-color ease;
+        }
+        button:hover {
+          border: 2px solid var(--primary-color);
+          background-color: transparent;
+          color: var(--primary-color);
+        }
+      }
+    }
+    .map-section {
+      background-color: var(--primary-color);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: inset 0px 0px 14px -3px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: inset 0px 0px 14px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 14px -3px rgba(0, 0, 0, 0.75);
+
+      .map {
+        border-radius: 5px;
+      }
+    }
+  }
+}
+/* Contact Me Page End  */
+
 @media screen and (max-width: 1024px) {
   header {
     padding: 1% 4%;
@@ -1227,6 +1308,28 @@ main {
     }
   }
   /* Blog Page End */
+
+  .footer {
+    .my-details-home-section {
+      grid-template-columns: 50% 50%;
+      gap: 20px;
+
+      .fax {
+        border-right: 1px solid rgba(130, 152, 171, 0.35);
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: px;
+        font-weight: 500;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1254,6 +1357,7 @@ main {
         z-index: 5;
 
         .list-items {
+          /* display: none; */
           width: 25%;
           position: absolute;
           top: 50px;
@@ -1335,8 +1439,8 @@ main {
             content: none;
           }
         }
-        .list-items::after {
-          content: none;
+        .list-items::before {
+          content: "";
           height: 5px;
           width: 10px;
           /* background-color: var(--primary-color); */
@@ -1525,6 +1629,24 @@ main {
     }
   }
   /* Blog Page End */
+
+  /* Contact Me Page Start  */
+  .contact-me-page-section {
+    color: var(--title-color);
+
+    .contact-main-section {
+      grid-template-columns: 100%;
+
+      .form-section {
+        form {
+        }
+      }
+      .map-section {
+        height: 450px;
+      }
+    }
+  }
+  /* Contact Me Page End  */
 }
 
 @media screen and (max-width: 577px) {
@@ -1844,6 +1966,25 @@ main {
       }
     }
   }
+
+  /* Contact Me Page Start  */
+  .contact-me-page-section {
+    .contact-main-section {
+      .form-section {
+        form {
+          .form-group {
+            flex-direction: column;
+          }
+
+          input[type="text"],
+          input[type="email"] {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  /* Contact Me Page End  */
 }
 
 @media screen and (max-width: 375px) {
