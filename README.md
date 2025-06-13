@@ -47,6 +47,9 @@ To view or work with this project locally:
 
 ---
 
+## Project Structure
+
+```
 ML-06-Projects/
 ├── index.html          // The main homepage of the website
 ├── about-me.html       // Dedicated page for information about you
@@ -63,3 +66,4 @@ ML-06-Projects/
 │   └── (my images)   //   └── e.g., hero_bg.jpg, profile.png, etc.
 └── cv/                 // Directory for your Curriculum Vitae
     └── (your-cv-file)  //   └── e.g., DeepakMaharjan_CV.pdf
+```
