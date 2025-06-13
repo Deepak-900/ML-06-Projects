@@ -27,25 +27,52 @@ fetch('components/navbar.html')
     });
   });
 
-  // Fetch footer from component file 
+   // Load footer
   fetch('components/footer.html')
     .then(response => response.text())
     .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-    })
+      document.getElementById('footer-container').innerHTML = data;
 
-    // Show/hide button on scroll
-  window.addEventListener('scroll', function() {
-    const goToTop = document.querySelector('.go-to-up-arrow');
-    if (window.scrollY > 300) {
-      goToTop.style.display = 'block';
-    } else {
-      goToTop.style.display = 'none';
-    }
-  });
+      // Wait until footer is inserted before adding scroll button listener
+      const goToTop = document.querySelector('.go-to-up-arrow');
 
-  // Smooth scroll to top on click
-  document.querySelector('.go-to-up-arrow').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+      // Show/hide button on scroll
+      window.addEventListener('scroll', function () {
+        if (!goToTop) return;
+        goToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+      });
+
+      // Scroll to top
+      goToTop?.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+// Run after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // Apply dark mode if already set
+  if (localStorage.getItem('darkmode') === 'active') {
+    document.body.classList.add('darkmode');
+  }
+
+  // Defer until theme switch button is available in DOM
+  const observeThemeSwitch = setInterval(() => {
+    const themeSwitch = document.getElementById('theme-switch');
+    if (!themeSwitch) return;
+
+    clearInterval(observeThemeSwitch); // Stop once found
+
+    themeSwitch.addEventListener('click', () => {
+      const darkmode = document.body.classList.contains('darkmode');
+
+      if (darkmode) {
+        document.body.classList.remove('darkmode');
+        localStorage.setItem('darkmode', null);
+      } else {
+        document.body.classList.add('darkmode');
+        localStorage.setItem('darkmode', 'active');
+      }
+    });
+  }, 100); // Check every 100ms until button is loaded
+});
