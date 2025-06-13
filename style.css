@@ -7,6 +7,7 @@
   --gray-color: #808080;
   --title-color: #323648; /* dark text for light bg */
   --para-color: #5b5e6d;
+  --div-bg: #fff;
   --bg-color: #f7f7f7; /* light background */
 }
 
@@ -17,6 +18,7 @@ body.darkmode {
   --gray-color: #a0a0a0; /* lighter gray for dark bg */
   --title-color: #e0e0e0; /* lighter text on dark bg */
   --para-color: #b0b0b0;
+  --div-bg: rgb(18 24 31);
   --bg-color: #121212; /* dark background */
 }
 
@@ -105,6 +107,7 @@ header {
             color: var(--white-color);
             text-decoration: none;
             font-weight: 600;
+            padding: 7px;
           }
           a:hover {
             color: var(--gray-color);
@@ -119,8 +122,8 @@ header {
             width: 200px;
             padding: 0;
             position: absolute;
-            top: 35px;
-            right: -10px;
+            top: 37px;
+            right: -12px;
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -143,6 +146,8 @@ header {
                 text-align: left;
                 width: 100%;
                 display: block;
+                padding-top: 0;
+                padding-bottom: 0;
               }
             }
           }
@@ -349,6 +354,7 @@ main {
   grid-template-columns: 25% 25% 25% 25%;
 
   .fun-facts-content {
+    background-color: var(--div-bg);
     border: 1.3px solid #dcdcdc;
     padding: 25px 25px;
     border-radius: 5px;
@@ -379,7 +385,7 @@ main {
     justify-content: space-between;
     gap: 20px;
     .testimonial {
-      background-color: var(--white-color);
+      background-color: var(--div-bg);
       border: 1px solid rgba(130, 152, 171, 0.35);
       padding: 3%;
       text-align: justify;
@@ -410,7 +416,7 @@ main {
 }
 
 .hire-section {
-  background-color: var(--white-color);
+  background-color: var(--div-bg);
 
   a {
     background-color: var(--primary-color);
@@ -448,7 +454,7 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: 1;
+    z-index: 0;
   }
   .main-subscribe {
     position: relative;
@@ -482,12 +488,12 @@ main {
         display: flex;
 
         input[type="email"] {
-          background: #ffffff;
+          background: var(--bg-color);
           border: none;
           padding: 14px;
           font-size: 17px;
           line-height: 28px;
-          color: #777777;
+          color: var(--para-color);
           width: 100%;
           border-top-right-radius: 0px;
           border-bottom-right-radius: 0px;
@@ -732,12 +738,12 @@ body.darkmode #theme-switch .sun-icon {
       }
     }
     .about-me-details {
+      color: var(--title-color);
       display: flex;
       flex-direction: column;
 
       p {
         width: 100%;
-        color: #000;
         line-height: 50px;
         a {
           color: var(--para-color);
@@ -765,6 +771,11 @@ body.darkmode #theme-switch .sun-icon {
       align-items: center;
       .myImg {
         min-height: 400px;
+        transition: filter 1s ease;
+        cursor: pointer;
+      }
+      .myImg:hover {
+        filter: drop-shadow(0 -10px 36px rgba(255, 1, 107, 0.781));
       }
     }
   }
@@ -1141,7 +1152,7 @@ body.darkmode #theme-switch .sun-icon {
       margin: 20px 0;
       border: 1px solid #d4d4d4;
       padding: 10px;
-      background-color: var(--white-color);
+      background-color: var(--div-bg);
       border-radius: 10px;
       display: flex;
     }
@@ -1170,6 +1181,7 @@ body.darkmode #theme-switch .sun-icon {
         font-size: 18px;
         border-radius: 5px;
         background-color: var(--bg-color);
+        color: var(--para-color);
         border: 2px solid #ccc; /* Default border */
       }
       input:focus,
@@ -1238,6 +1250,7 @@ body.darkmode #theme-switch .sun-icon {
           font-size: 18px;
           border-radius: 5px;
           background-color: var(--bg-color);
+          color: var(--para-color);
           border: 2px solid #ccc; /* Default border */
         }
         input:focus,
