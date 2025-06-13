@@ -1617,7 +1617,7 @@ body.darkmode #theme-switch .sun-icon {
       display: block;
       width: 50px;
       background-color: var(--title-color);
-      color: var(--white-color);
+      color: var(--div-bg);
       padding: 1% 2%;
       border-radius: 5px;
       border: none;
