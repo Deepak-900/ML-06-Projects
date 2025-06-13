@@ -629,18 +629,19 @@ main {
 
   .go-to-up-arrow {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 100px;
+    right: 20px;
     background-color: var(--primary-color);
     color: white;
-    padding: 7px 19px;
+    padding: 5px 15px;
     /* border-radius: 50%; */
     text-align: center;
     font-size: 25px;
     cursor: pointer;
     display: none;
     z-index: 1000;
-    border-radius: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--para-color);
     transition: opacity 0.9s ease;
     i {
       animation-name: bounceUpDown;
@@ -662,11 +663,13 @@ main {
   border-radius: 50%;
   background-color: var(--bg-color);
   position: fixed;
-  right: 35px;
-  bottom: 100px;
+  right: 20px;
+  bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  z-index: 999;
 }
 #theme-switch svg {
   fill: var(--title-color);
