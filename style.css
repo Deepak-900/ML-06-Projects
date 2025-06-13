@@ -2,12 +2,24 @@
 
 :root {
   --white-color: #fff;
+  --black-color: #000;
   --primary-color: #f5637c;
   --gray-color: #808080;
-  --title-color: #323648;
+  --title-color: #323648; /* dark text for light bg */
   --para-color: #5b5e6d;
-  --bg-color: #f7f7f7;
+  --bg-color: #f7f7f7; /* light background */
 }
+
+body.darkmode {
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #f5637c;
+  --gray-color: #a0a0a0; /* lighter gray for dark bg */
+  --title-color: #e0e0e0; /* lighter text on dark bg */
+  --para-color: #b0b0b0;
+  --bg-color: #121212; /* dark background */
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -21,7 +33,7 @@ body {
   font-weight: 800;
   font-style: normal;
   color: var(--white-color);
-  background-color: var(--white-color);
+  background-color: var(--bg-color);
   scroll-behavior: smooth;
 }
 .container {
@@ -635,6 +647,35 @@ main {
     background-color: var(--title-color);
     color: var(--primary-color);
   }
+}
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  position: fixed;
+  right: 35px;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#theme-switch svg {
+  fill: var(--title-color);
+  height: 30px;
+}
+#theme-switch .sun-icon {
+  display: none;
+}
+
+body.darkmode #theme-switch .moon-icon {
+  display: none;
+}
+body.darkmode #theme-switch .sun-icon {
+  display: block !important;
+  fill: var(--white-color) !important;
 }
 
 /* Home Page End */
