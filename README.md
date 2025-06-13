@@ -17,7 +17,7 @@ Check out the live version of this responsive web page here:
 
 * **Responsive Design:** Adapts seamlessly to various screen sizes (desktops, tablets, mobile phones).
 * **Clean HTML Structure:** Well-organized and semantic HTML5.
-* **Modern SCSS Styling:** Styled with Sass (SCSS syntax) for organized, maintainable, and efficient CSS.
+* **Modern CSS Styling:** Styled with Sass (SCSS syntax) for organized, maintainable, and efficient CSS.
 * **Interactive JavaScript:** Enhances user experience with dynamic elements (if applicable, e.g., navigation toggle, simple animations).
 
 ---
@@ -36,7 +36,7 @@ To view or work with this project locally:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Deepak-900/ML-06-Projects.git](https://github.com/Deepak-900/ML-06-Projects.git)
+    git clone https://github.com/Deepak-900/ML-06-Projects.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
@@ -47,20 +47,19 @@ To view or work with this project locally:
 
 ---
 
-## Project Structure
- ├── ML-06-Projects
-  ├── index.html (main file)
-  ├── about-me.html
-  ├── contact-me.html
-  ├── services.html
-  ├── blog.html
-  ├── blog-details.html
-  ├── style.css
-  ├── script.js
-  ├── about-me.html
-  ├── components
-  │   └── navbar.html
-  │   └── footer.html
-  ├── images
-  │   └── all images used in the project
-  └── cv (my cv)
+ML-06-Projects/
+├── index.html          // The main homepage of the website
+├── about-me.html       // Dedicated page for information about you
+├── contact-me.html     // Page with contact form or details
+├── services.html       // Page detailing services offered
+├── blog.html           // Main blog listing page
+├── blog-details.html   // Template for individual blog posts
+├── style.css           // Primary CSS file for styling
+├── script.js           // Main JavaScript file for interactivity
+├── components/         // Reusable HTML snippets
+│   ├── navbar.html     //   └── Navigation bar component
+│   └── footer.html     //   └── Website footer component
+├── images/             // All image assets used throughout the project
+│   └── (my images)   //   └── e.g., hero_bg.jpg, profile.png, etc.
+└── cv/                 // Directory for your Curriculum Vitae
+    └── (your-cv-file)  //   └── e.g., DeepakMaharjan_CV.pdf
