@@ -110,7 +110,7 @@ header {
             padding: 7px;
           }
           a:hover {
-            color: var(--gray-color);
+            color: var(--black-color);
           }
         }
         .dropdown {
